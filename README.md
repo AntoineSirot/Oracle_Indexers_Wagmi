@@ -36,7 +36,7 @@ npm run dev
 The platform use two technology with specific purpose:
 
 - **Swap tokens**: This primary functionality allows anyone to mint some of my ETH / StableCoin tokens and then swap one for the other. The ratio of the tokens is calculated from the ETH price retrieved on the marketplace with Chainlink's oracle.
-- **Get whales of a sushiswap poll**: This secondary functionality is based on TheGraph. The front will return the three biggest whales of a specific sushiswap pool. The user can enter his pool id or he can choose one of the five preregistered pools. 
+- **Get whales of a sushiswap poll**: This secondary functionality is based on TheGraph. The front will return the three biggest whales of a specific sushiswap pool. The user can enter his pool id or he can choose one of the five preregistered pools. (nb: If the 3 whales ain't displayed in the first time you enter the app, please change the pool you want to display and then everything will work as it should)
 
 
 ### Bugs and Issues
