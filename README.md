@@ -1,17 +1,46 @@
-This is a [wagmi](https://wagmi.sh) + [RainbowKit](https://rainbowkit.com) + [Next.js](https://nextjs.org) project bootstrapped with [`create-wagmi`](https://github.com/wagmi-dev/wagmi/tree/main/packages/create-wagmi)
+# TheGraph and Chainlink Front
 
-# Getting Started
+This repository hosts a web3 front-end project that uses chainlink oracle to simulate the ETH price on a ERC20 tokens and use TheGraph to retrieved information from sushiswap's pools.
 
-Run `npm run dev` in your terminal, and then open [localhost:3000](http://localhost:3000) in your browser.
+[Project Deployment on Vercel](https://oracle-indexers-wagmi.vercel.app/)
 
-Once the webpage has loaded, changes made to files inside the `src/` directory (e.g. `src/pages/index.tsx`) will automatically update the webpage.
+## Getting Started
 
-# Learn more
+To run the project locally, execute the following commands:
+```
+npm i
+npm run dev
+```
 
-To learn more about [Next.js](https://nextjs.org) or [wagmi](https://wagmi.sh), check out the following resources:
+## Contract Address (deployed on Sepolia)
 
-- [wagmi Documentation](https://wagmi.sh) – learn about wagmi Hooks and API.
-- [wagmi Examples](https://wagmi.sh/examples/connect-wallet) – a suite of simple examples using wagmi.
-- [RainbowKit Documentation](https://rainbowkit.com/docs/introduction) – learn more about RainbowKit (configuration, theming, advanced usage, etc).
-- [Next.js Documentation](https://nextjs.org/docs) learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+**Marketplace Contract** : [0xff07eb7Ca89812CdEBe280CaFBc69c59a08C7203](https://sepolia.etherscan.io/address/0xff07eb7ca89812cdebe280cafbc69c59a08c7203)
+
+**StableCoin Contract** : [0x512fB45C344831B147818C81A11E2D39368bb75d](https://sepolia.etherscan.io/address/0x512fB45C344831B147818C81A11E2D39368bb75d)
+
+**ERC20 Ether Contract** : [0x51E698fC402597824EA586B095DD8DfaCfbEd67c](https://sepolia.etherscan.io/address/0x51E698fC402597824EA586B095DD8DfaCfbEd67c)
+
+## Technical Stack
+
+ - [Wagmi](https://wagmi.sh)
+ - [Next.js](https://nextjs.org)
+ - [RainbowKit Documentation](https://rainbowkit.com/docs/introduction)
+ - [Vercel for deployment](https://vercel.com)
+ - [Chainlink oracle](https://chain.link)
+ - [TheGraph](https://thegraph.com)
+
+
+## Key Features
+### Main Functionality:
+
+The platform use two technology with specific purpose:
+
+- **Swap tokens**: This primary functionality allows anyone to mint some of my ETH / StableCoin tokens and then swap one for the other. The ratio of the tokens is calculated from the ETH price retrieved on the marketplace with Chainlink's oracle.
+- **Get whales of a sushiswap poll**: This secondary functionality is based on TheGraph. The front will return the three biggest whales of a specific sushiswap pool. The user can enter his pool id or he can choose one of the five preregistered pools. 
+
+
+### Bugs and Issues
+
+If you find any issues or have suggestions, please open an issue or create a pull request on this repository.
+
+Thank you for your support !
